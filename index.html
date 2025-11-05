@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="form-container">
+        <h1 class="text-center">login here</h1>
+
+        <form action="" method="">
+            <input class="user-input" type="text" name="name" id="user-name" placeholder="enter your username">
+            <p id="user-name-error" class="error"></p>
+
+            <input class="user-input" type="email" name="email" id="email" placeholder="enter your email">
+            <p id="email-error" class="error"></p>
+
+            <input class="user-input" type="password" name="password" id="password" placeholder="enter your password">
+            <p id="password-error" class="error"></p>
+
+            <input class="user-input" type="password" name="password" id="confirm-password"
+                placeholder="confirm password">
+            <p id="confirm-password-error" class="error"></p>
+
+            <div class="checkbox-container">
+                <input class="checkbox" id="showPasswordToggle" type="checkbox" />
+                <label class="checkbox-label" for="showPasswordToggle">show password</label>
+            </div>
+
+            <div class="btn-container">
+                <button class="btn" type="">sign in</button> <!-- submit -->
+            </div>
+        </form>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
