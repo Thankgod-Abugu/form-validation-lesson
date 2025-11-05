@@ -35,7 +35,7 @@ function validateEmail() {
 }
 
 // password validation
-const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?`~]).{8}$/;
+const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?`~]).{8,16}$/;
 
 function validatePassword() {
   const passwordInput = document.getElementById("password").value.trim();
@@ -46,8 +46,8 @@ function validatePassword() {
   // password validation conditioners
   if (passwordInput === "") {
     passwordErr.textContent = "password cannot be empty";
-  } else if (passwordInput.length != 8) {
-    passwordErr.textContent = "password must be 8 characters";
+  } else if (passwordInput.length < 8 | passwordInput.length > 16) {
+    passwordErr.textContent = "password must be between 8 to 16 characters";
   } else if (passwordRegex.test(passwordInput)) {
     console.log("password is valid");
     passwordErr.textContent = "";
@@ -90,5 +90,6 @@ signInBtn.addEventListener("click", (event) => {
   validateEmail();
   validatePassword();
 });
+
 
 
