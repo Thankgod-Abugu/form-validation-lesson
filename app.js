@@ -51,8 +51,8 @@ function validatePassword() {
   } else if (passwordRegex.test(passwordInput)) {
     console.log("password is valid");
     passwordErr.textContent = "";
-  } else if (!passwordRegex.test(passwordInput)) {
-    passwordError.textContent = "password must contain (a-z, A-Z, 0-9 and a symbol)";
+  } else {
+    passwordErr.textContent = "password must contain (a-z, A-Z, 0-9 and a symbol)";
   }
 
   // confirm-password validation conditioners
@@ -90,4 +90,5 @@ signInBtn.addEventListener("click", (event) => {
   validateEmail();
   validatePassword();
 });
+
 
