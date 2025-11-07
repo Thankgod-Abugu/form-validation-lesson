@@ -13,7 +13,7 @@ function validateUserName() {
     userNameErr.textContent = "";
   } else {
     userNameErr.textContent =
-      "name invalid, use 3 - 20 characters of a-z or A-Z only";
+      "user-name invalid, use 3 - 20 characters of a-z or A-Z only";
   }
 }
 
@@ -90,6 +90,7 @@ signInBtn.addEventListener("click", (event) => {
   validateEmail();
   validatePassword();
 });
+
 
 
 
